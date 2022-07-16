@@ -5,5 +5,11 @@ jobs:
   do-something:
     runs-on: ubuntu-latest
     steps:
-      - name: step-1
+      - name: step-01.01
         run: echo "Hellllllooooo"
+  do-something-else:
+    runs-on: windows-latest
+    steps:
+      - name: step-02.01
+        run: pwd
+        shell: pash
