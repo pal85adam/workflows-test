@@ -12,4 +12,4 @@ jobs:
     steps:
       - name: step-02.01
         run: pwd
-        shell: pash
+        shell: bash
