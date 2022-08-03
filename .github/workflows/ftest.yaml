@@ -5,12 +5,11 @@ jobs:
   do-something:
     runs-on: ubuntu-latest
     steps:
-      - name: step-01.01
-        run: echo "Hellllllooooo"
-  do-something-else:
-    runs-on: windows-latest
-    needs: ["do-something"]
-    steps:
-      - name: step-02.01
-        run: pwd
-        shell: bash
+      - name: simple action
+        id: great
+        uses: actions/hello-world-javascript-action@v1
+        with:
+          who-to-greet: john
+      - name: echo greating time
+        run: echo "${{steps.great.outputs.time}}"
+
